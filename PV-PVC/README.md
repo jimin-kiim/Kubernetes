@@ -21,7 +21,7 @@
 
    ```kubectl get pods```
 
-7. 파일에 메시지 저장 (service 통해 post 요청 전송)
+7. 임시 pod 만들어서 파일에 메시지 저장 (service 통해 post 요청 전송)
 
    ```
    kubectl run curl --image=curlimages/curl -it --rm --restart=Never -- \
@@ -29,7 +29,7 @@
    -d '{"message":"hello from pvc"}' http://pv-service:3000 
    ```
 
-8. 파일 메시지 읽기 (service 통해 get 요청 전송)
+8. 임시 pod 만들어서 파일 메시지 읽기 (service 통해 get 요청 전송)
 
    ```
    kubectl run curl --image=curlimages/curl -it --rm --restart=Never \ 
@@ -41,7 +41,7 @@
    ``` kubectl delete pod pv-demo```
 
 10. Pod 재생성 
-11. 파일 메시지 다시 읽기 
+11. 임시 pod 만들어서 파일 메시지 다시 읽기 
 
 ## 결과 확인
 <img width="1662" height="447" alt="스크린샷 2025-12-03 오후 4 23 30" src="https://github.com/user-attachments/assets/de62c821-2930-47ba-8501-b8e212dfcf77" />

@@ -41,7 +41,7 @@
     kubectl apply -f pod.yaml
     ```
 
-10. 메시지 읽기 (Pod 삭제에도 유지됨)
+10. 임시 pod 만들어서 메시지 읽기 (Pod 삭제에도 유지됨)
     ```
     kubectl run curl --image=curlimages/curl -it --rm --restart=Never \ 
     --command -- curl http://sc-service:3000
