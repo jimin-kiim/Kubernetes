@@ -27,7 +27,7 @@
    kubectl run curl --image=curlimages/curl -it --rm --restart=Never -- \
    curl -X POST -H "Content-Type: application/json" \
    -d '{"message":"hello from pvc"}' http://pv-service:3000 
-  ```
+   ```
 
 8. 파일 메시지 읽기
 
@@ -44,3 +44,4 @@
 11. 파일 메시지 다시 읽기 
 
 ## 결과 확인
+<img width="1662" height="447" alt="스크린샷 2025-12-03 오후 4 23 30" src="https://github.com/user-attachments/assets/de62c821-2930-47ba-8501-b8e212dfcf77" />
