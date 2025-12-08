@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+  
+metadata:
+  name: pod-sa-no-token
+    
+spec:
+  serviceAccountName: sa-reader
+    
+  automountServiceAccountToken: false
+    
+  containers:
+    - name: kubectl
+      image: bitnami/kubectl
+      command: ["sleep", "3600"]
