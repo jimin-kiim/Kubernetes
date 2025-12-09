@@ -1,0 +1,20 @@
+server:
+  nodeSelector:
+    monitoring: "yes"
+
+  service:
+    type: NodePort
+    nodePort: 30090
+  persistentVolume:
+    enabled: true
+    storageClass: local-path
+    size: 2Gi
+alertmanager:
+  enabled: true
+
+  nodeSelector:
+    monitoring: "yes"
+  persistentVolume:
+    enabled: true
+    storageClass: local-path
+    size: 1Gi
